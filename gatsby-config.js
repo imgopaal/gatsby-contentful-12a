@@ -1,3 +1,7 @@
+const dotenv = require("dotenv")
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config()
+}
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Blog`,
@@ -13,6 +17,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    // `@contentful/gatsby-transformer-contentful-richtext`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: "0dd3pzgsmb5s",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
