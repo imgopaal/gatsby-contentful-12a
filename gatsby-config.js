@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    // `@contentful/gatsby-transformer-contentful-richtext`,
+    `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
