@@ -1,7 +1,7 @@
-const dotenv = require("dotenv")
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config()
-}
+// const dotenv = require("dotenv")
+// if (process.env.NODE_ENV !== "production") {
+//   dotenv.config()
+// }
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Blog`,
@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: "0dd3pzgsmb5s",
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: '5429nfeLTDAmMe8XIzZiNAnsPc4gFFNM3tPB_tTLrmQ',
       },
     },
     {
